@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Calculator.css";
 
-function calculator() {
+function Calculator() {
 return (
     <div className="calculator">
       <h2>Current Run</h2>
@@ -9,4 +9,4 @@ return (
   );
 };
 
-export default calculator;
+export default Calculator;

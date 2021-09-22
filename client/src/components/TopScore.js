@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "./TopScore.css";
 
-function topScore() {
-return (
+function TopScore() {
+  const [highScore, setHighScore] = useState(75);
+  
+  return (
     <div className="topScore">
-      <h2>Your Current High Score</h2>
+      <h2>Your Current High Score: {highScore}</h2> 
+      {/* <button>View Run</button> */}
     </div>
   );
 };
 
-export default topScore;
+export default TopScore;
