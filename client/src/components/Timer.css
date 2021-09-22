@@ -1,0 +1,10 @@
+.timer button{
+    margin: 10px;
+    font-family: text;
+    border-radius: 10px;;
+
+}
+
+.timer button:hover {
+    background-color: lightgreen;
+  }
