@@ -30,7 +30,7 @@ function Timer() {
     seconds+=count;
     return `${minutes}:${tensSeconds}${seconds}`
 
-  }
+  } 
 
 
 return (
