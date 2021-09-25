@@ -5,3 +5,17 @@
   format: ("truetype");
 }
 
+nav{
+  background-color: lightblue;
+  padding: 10px;
+  font-size: 100%;
+  font-family: text;
+}
+
+.App ul{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto; 
+  list-style: none;
+  text-align: left;
+}

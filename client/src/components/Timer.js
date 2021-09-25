@@ -6,12 +6,10 @@ function Timer() {
   const [timeLimit, setTimeLimit] = useState(150) 
 
   function startTimer(timeLimit){
-    if (timeLimit === 0) {
-      setTimeLimit(0);
-    } else {
-      setTimeout(() => setTimeLimit(timeLimit-1), 1000);
-      return 0
+    while (timeLimit>0){
+      return setTimeout(() => setTimeLimit(timeLimit-1), 1000);
     }
+    return (0)
   };
 
   function display(timeLimit){
@@ -19,7 +17,7 @@ function Timer() {
     let minutes = 0;
     let tensSeconds=0;
     let seconds = 0;
-    while (count>60){
+    while (count>59){
       minutes++;
       count-=60;
     } 
@@ -38,7 +36,7 @@ return (
     <div className="timer">
       <h2>Timer</h2>
       <h1>{display(timeLimit)}</h1>
-      <button onClick={startTimer(timeLimit)}>Start Timer</button>
+      <button onClick={(e) => startTimer(timeLimit)}>Start Timer</button>
       {/* <button onClick={(e) => setTimeLimit(150)}>Reset Timer</button> */}
     </div>
   );
