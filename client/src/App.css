@@ -1,19 +1,7 @@
-.App {
-  text-align: center;
-  font-family: "text";
-}
-
-.App img {
-  width: 40%;
-}
-
-button:hover {
-  cursor: pointer;
-}
 
 @font-face {
   font-family: "text";
-  src: url('arial_narrow_7.ttf');
+  src: url('./components/arial_narrow_7.ttf');
   format: ("truetype");
 }
 

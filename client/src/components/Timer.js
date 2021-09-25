@@ -10,7 +10,7 @@ function Timer() {
       setTimeLimit(0);
     } else {
       setTimeout(() => setTimeLimit(timeLimit-1), 1000);
-      return
+      return 0
     }
   };
 
