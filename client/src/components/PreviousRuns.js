@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Home.css";
+import "./PreviousRuns.css";
 
 import TopScore from './TopScore'
 import Calculator from './Calculator'

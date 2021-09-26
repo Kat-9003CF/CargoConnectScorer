@@ -1,0 +1,21 @@
+.PrevRuns {
+    text-align: center;
+    font-family: "text";
+  }
+  
+  .PrevRuns img {
+    width: 40%;
+    margin: 0 auto;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  @font-face {
+    font-family: "text";
+    src: url('arial_narrow_7.ttf');
+    format: ("truetype");
+  }
+  
+  
