@@ -5,7 +5,7 @@ import TopScore from './TopScore'
 import Calculator from './Calculator'
 import Timer from './Timer'
 
-function PreviousRuns() {
+function PreviousRuns(props) {
   
   return (
       <div className = 'PrevRuns'>

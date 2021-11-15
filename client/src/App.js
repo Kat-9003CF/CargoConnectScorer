@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,6 +14,28 @@ import Home from './components/Home'
 import PreviousRuns from './components/PreviousRuns'
 
 function App() {
+const [scores, setScores] = useState([]);
+
+useEffect(() => {
+  getScores();
+}, []);
+
+   // GET all scores
+   async function getScores() {
+    try {
+      let response = await fetch('/Scores');
+      if (response.ok) {
+        let scores = await response.json();
+        setScores(scores);
+      } else {
+        console.log(`Server error: ${response.status} ${response.statusText}`);
+      }
+    } catch (err) {
+      console.log(`Network error: ${err.message}`);
+    }
+  }
+
+
   return (
     <div className="App">
 
