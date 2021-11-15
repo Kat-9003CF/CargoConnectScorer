@@ -1,16 +1,16 @@
 
 -- (Re)create the table
 
-DROP TABLE IF EXISTS ducks;
-CREATE TABLE ducks (
+DROP TABLE IF EXISTS Scores;
+CREATE TABLE Scores (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(20) NOT NULL,
-    prizeMoney INT NOT NULL
+    date VARCHAR(20) NOT NULL,
+    score INT NOT NULL,
+    challenges completed VARCHAR(20) NOT NULL
 );
 
 -- Insert some test data
 
--- INSERT INTO ducks (name, prizeMoney)
--- VALUES
---     ('Bono', 2000),
---     ('Bjork', 6500);
+INSERT INTO Scores (date, score, challenges completed)
+VALUES
+    ('Monday 15th November', 215, 'Some');
