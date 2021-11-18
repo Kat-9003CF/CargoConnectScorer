@@ -17,4 +17,6 @@ CREATE TABLE Scores (
 
 INSERT INTO Scores (date, score, challenges)
 VALUES
-    ('Monday 15th November', 215, 'Some');
+    ('Monday 15th November', 200, 'Some'),
+    ('Monday 15th November', 215, 'More'),
+    ('Monday 15th November', 190, 'Fewer');
