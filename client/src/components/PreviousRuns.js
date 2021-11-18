@@ -8,9 +8,11 @@ import Timer from './Timer'
 function PreviousRuns(props) {
   
   return (
+
       <div className = 'PrevRuns'>
+        <TopScore scores ={props.scores}/>
         <h2>Previous Run Scores and Details</h2>
-        <table className="staffList">
+        <table className="prevRuns">
       <thead>
         <tr>
           <th>Date</th>

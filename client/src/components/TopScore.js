@@ -1,8 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./TopScore.css";
 
-function TopScore() {
-  const [highScore, setHighScore] = useState(75);
+
+function TopScore(props) {
+  const [scores, setScores] = useState(props.scores);
+  const [highScore, setHighScore] = useState([])
+
+  useEffect(() => {
+    getHighScore();
+  }, []);
+
+  function getHighScore(){
+    let allScores = props.scores.map(n => n.score);
+    let highScore = allScores[0];
+    for (let score in allScores){
+      if (score>highScore){
+        highScore = score;
+      }
+    }
+    setHighScore(highScore)
+    console.log(highScore)
+  }
+ 
   
   return (
     <div className="topScore">
