@@ -10,6 +10,28 @@ function PreviousRuns(props) {
   return (
       <div className = 'PrevRuns'>
         <h2>Previous Run Scores and Details</h2>
+        <table className="staffList">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Score</th>
+          <th>Challenges</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        {props.scores.map(s => (
+          <tr key={s.id}>
+            <td>{s.date}</td>
+            <td>{s.score}</td>
+            <td>{s.challenges}</td>
+            <td>
+              <button onClick={e => props.deleteCb(s.id)}>X</button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
         
         {/* <Calculator/> */}
     </div>

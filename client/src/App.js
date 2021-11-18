@@ -35,6 +35,26 @@ useEffect(() => {
     }
   }
 
+  //DELETE a score
+
+  async function deleteScore(id) {
+    let options = {
+      method: "DELETE"
+    };
+
+    try {
+      let response = await fetch(`/scores/${id}`, options);
+      if (response.ok) {
+        let scores = await response.json();
+        setScores(scores);
+      } else {
+        console.log(`Server error: ${response.status} ${response.statusText}`);
+      }
+    } catch (err) {
+      console.log(`Network error: ${err.message}`);
+    }
+  }
+
 
   return (
     <div className="App">
@@ -56,7 +76,7 @@ useEffect(() => {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/PreviousRuns">
-            <PreviousRuns />
+            <PreviousRuns scores={scores} deleteCb={id => deleteScore(id)} />
           </Route>
           <Route path="/">
             <Home />
