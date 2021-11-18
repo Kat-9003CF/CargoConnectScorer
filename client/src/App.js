@@ -23,7 +23,7 @@ useEffect(() => {
    // GET all scores
    async function getScores() {
     try {
-      let response = await fetch('/Scores');
+      let response = await fetch('/scores');
       if (response.ok) {
         let scores = await response.json();
         setScores(scores);
